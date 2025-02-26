@@ -184,23 +184,53 @@
 // function as an argument
 
 // creating a calculator using functional argument
-function sum(a, b){
-    return a + b;
-}
-function multiply(a, b){
-    return a*b;
-}
-function subract(a, b){
-    return a-b;
-}
-function divide(a, b){
-    return a/b;
-}
+// function sum(a, b){
+//     return a + b;
+// }
+// function multiply(a, b){
+//     return a*b;
+// }
+// function subract(a, b){
+//     return a-b;
+// }
+// function divide(a, b){
+//     return a/b;
+// }
 
-function doOperation(a, b, op){
-    return op(a, b);
-}
+// function doOperation(a, b, op){
+//     return op(a, b);
+// }
 // here we are passing function as an argument to doOperation function
-console.log(doOperation(6, 2, multiply));
+// console.log(doOperation(6, 2, multiply));
 
 // Asynchronus code
+// In case the file doesn't exist we will get an error
+// function print(err, data){
+//     if(err){
+//         console.log(err);
+//     }
+//     else{
+//         console.log(data);
+//     }
+// }
+// const fs = require("fs")
+// const content = fs.readFile("fil.txt", "utf-8", print);
+// const content2 = fs.readFile("file2.txt", "utf-8", print)
+// console.log("Done!"); // this will not wait for the other tasks to get completed.
+
+console.log("Hello there");
+function timeout(){
+    console.log("Ckick the button");
+}
+setTimeout(timeout, 1000); // it schedules a one time call back after dalay milliseconds
+let c = 0;
+for(let i = 0; i< 10000000000; i++){
+    c = c  + 1;
+}
+console.log("value of c", c);
+
+console.log("Welcom to programming world");
+// website: latentflip.com for visulisation of callback queue, call stack and web apis.
+
+
+
