@@ -93,7 +93,7 @@
 
 // create a function that takes an array of obejects as input
 // and return the users whoa age > 18 and are male
-user4 = [{name:"ankit", age: 23, gender: "M"}, {name: "Tushar", age: 23, gender: "M"}, {name: "Sarthak", age: 69, gender: "R"}, {name: "Govind", age: 9, gender: "M"}]
+// user4 = [{name:"ankit", age: 23, gender: "M"}, {name: "Tushar", age: 23, gender: "M"}, {name: "Sarthak", age: 69, gender: "R"}, {name: "Govind", age: 9, gender: "M"}]
 
 //? using an array 
 
@@ -109,12 +109,98 @@ user4 = [{name:"ankit", age: 23, gender: "M"}, {name: "Tushar", age: 23, gender:
 // }
 // console.log(checkGender(user4));
 
+
 //^  using filter function
 
-function usingFilter(user){
-    return user.age >= 18 && user.gender == "M";
+// function usingFilter(user){
+//     return user.age >= 18 && user.gender == "M";
+// }
+// const res = user4.filter(usingFilter);
+// console.log(res);
+
+
+// ^ parsing
+
+// function sum(a, b){
+//     // a will be parsed to a number
+//     return parseInt(a) + b 
+// }
+// let ans = sum("20", 30)
+// console.log(ans);
+
+// find sum from 1 to a number
+
+// the code below is synchronous js code
+// function sum(n){
+    // let ans = 0;
+    // for(let i = 1; i <= n; i++){
+    //     ans += i;
+    // }
+    // return ans;
+
+    // return n * (n + 1)/2;
+// }
+
+// console.log(sum(5));
+
+// Synchronus code is executes line by lien, in the order it's written.
+// Each operation waits fro the prevuous one to complete before moving on to the next one.
+
+
+// ^ reading file using file system
+// async way of reading file
+// here only one file can be read at a time
+
+
+// const { log } = require("console");
+// const fs = require("fs")
+// const content = fs.readFileSync("file.txt", "utf-8")
+
+// console.log(content);
+// const content2 = fs.readFile("file2.txt", "utf-8")
+
+// console.log(content2);
+// console.log("My name is ankit mishra");
+
+
+// ^  reading file synchronusly
+// here all the files will be read at the sae time
+// any of the file can be read first then second and then third
+
+// const fs = require("fs")
+// fs.readFile("file.txt", "utf-8", function(err, content){
+//     console.log(content);
+// })
+
+// fs.readFile("file2.txt", "utf-8", function(err, content){
+//     console.log(content);
+// })
+// fs.readFile("file3.txt", "utf-8", function(err, content){
+//     console.log(content);
+// });
+
+
+// functional arguments -> passing a function to antoher 
+// function as an argument
+
+// creating a calculator using functional argument
+function sum(a, b){
+    return a + b;
 }
-const res = user4.filter(usingFilter);
-console.log(res);
+function multiply(a, b){
+    return a*b;
+}
+function subract(a, b){
+    return a-b;
+}
+function divide(a, b){
+    return a/b;
+}
 
+function doOperation(a, b, op){
+    return op(a, b);
+}
+// here we are passing function as an argument to doOperation function
+console.log(doOperation(6, 2, multiply));
 
+// Asynchronus code
