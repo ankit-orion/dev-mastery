@@ -230,7 +230,5 @@ for(let i = 0; i< 10000000000; i++){
 console.log("value of c", c);
 
 console.log("Welcom to programming world");
-// website: latentflip.com for visulisation of callback queue, call stack and web apis.
-
-
+// website: latentflip.com for visulisation of callback queue, call stack and web apis
 
